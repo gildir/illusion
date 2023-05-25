@@ -26,46 +26,59 @@ for i in range(1000):
 display2 = display1.copy()
 display2.set_colorkey(white)
 
-offset_x = 0
-offset_y = 0
-offset_ro = 0
-offset_size = 1
+key_speed = 0.5
+scale_speed = 0.003
+rot_speed = 0.25
 
+def reset():
+	global offset_x
+	global offset_y
+	global offset_ro
+	global offset_size
+	
+	offset_x = 0
+	offset_y = 0
+	offset_ro = 0
+	offset_size = 1
+reset()
 
 done = False
 while not done:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			done = True
+		elif event.type == pygame.KEYDOWN:
+			if event.key == pygame.K_x:
+				reset()
 
-		if event.type == pygame.KEYDOWN:
-			if event.key == pygame.K_LEFT:
-				offset_x -= 1
-			elif event.key == pygame.K_RIGHT:
-				offset_x += 1
-			elif event.key == pygame.K_DOWN:
-				offset_y -= 1
-			elif event.key == pygame.K_UP:
-				offset_y += 1
-			elif event.key == pygame.K_UP:
-				offset_y += 1
-			elif event.key == pygame.K_a:
-				offset_ro -= 1
-			elif event.key == pygame.K_d:
-				offset_ro += 1
-			elif event.key == pygame.K_s:
-				offset_size -= 0.01
-			elif event.key == pygame.K_w:
-				offset_size += 0.01
+	keys = pygame.key.get_pressed()
+	if keys[pygame.K_LEFT]:
+		offset_x -= key_speed
+	elif keys[pygame.K_RIGHT]:
+		offset_x += key_speed
+	elif keys[pygame.K_DOWN]:
+		offset_y -= key_speed
+	elif keys[pygame.K_UP]:
+		offset_y += key_speed
+	elif keys[pygame.K_UP]:
+		offset_y += key_speed
+	elif keys[pygame.K_a]:
+		offset_ro -= rot_speed
+	elif keys[pygame.K_d]:
+		offset_ro += rot_speed
+	elif keys[pygame.K_s]:
+		offset_size -= scale_speed
+	elif keys[pygame.K_w]:
+		offset_size += scale_speed
 		
-			rotated = pygame.transform.rotate(display1, offset_ro)
-			scaled = pygame.transform.scale_by(rotated, offset_size)
-			
-			rect = scaled.get_rect(center = display1.get_rect(topleft = (0,0)).center)
-			
-			display2.fill(white)
-			display2.blit(scaled, rect.topleft)
-			display2.set_colorkey(white)
+	rotated = pygame.transform.rotate(display1, offset_ro)
+	scaled = pygame.transform.scale_by(rotated, offset_size)
+	
+	rect = scaled.get_rect(center = display1.get_rect(topleft = (0,0)).center)
+	
+	display2.fill(white)
+	display2.blit(scaled, rect.topleft)
+	display2.set_colorkey(white)
 	
 	gameDisplay.fill(white)
 	gameDisplay.blit(display1, (0,0))
@@ -76,4 +89,3 @@ while not done:
 	clock.tick(60)
 
 pygame.quit()
-quit()
