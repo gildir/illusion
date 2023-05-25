@@ -4,7 +4,7 @@ Illusion from scaled/rotated/translated dots inspired by video of Tim at Grand I
 <img src="Illusion1.png" width="400"> <img src="Illusion3.png" width="400">
 
 ## Running the code
-**Option 1:** Running **[](illusion.py)** with python directly. This should be used if you have having issues with your anti-virus program flagging all PyInstaller builds as viruses.
+**Option 1:** Running **[illusion.py](illusion.py)** with python directly. This should be used if you have having issues with your anti-virus program flagging all PyInstaller builds as viruses.
 
 This requires:
 1. Have python 3.X installed (https://www.python.org/downloads/)
@@ -15,9 +15,9 @@ After the above setup, running the file should just involve typing the command o
 For example: `python3 illusion.py`
 
 
-**Option 2:** Download and run the **[](illusion.exe)** (created with PyInstaller, https://pyinstaller.org/en/stable/). Note that many antivirus programs may falsely flag this as a virus. There is nothing I can do about this, but you may be able to tell your antivirus software to ignore the problem (if you trust doing that).
+**Option 2:** Download and run the **[illusion.exe](illusion.exe)** (created with PyInstaller, https://pyinstaller.org/en/stable/). Note that many antivirus programs may falsely flag this as a virus. There is nothing I can do about this, but you may be able to tell your antivirus software to ignore the problem (if you trust doing that).
 
-**Option 3:** Download and run the **[](illusion.zip)** (also created with PyInstaller, but different settings). Unzip, navigate into the folder, and run that illusion.exe. This might (or might not) have fewer problems with antivirus software.
+**Option 3:** Download and run the **[illusion.zip](illusion.zip)** (also created with PyInstaller, but different settings). Unzip, navigate into the folder, and run that illusion.exe. This might (or might not) have fewer problems with antivirus software.
 
 
 ## Commands:
