@@ -24,3 +24,4 @@ For example: `python3 illusion.py`
 * Arrow keys translate the image (up, down, left, right)
 * 'a' and 'd' keys rotate the image ('a' = counter clockwise, 'd' = clockwise)
 * 'w' and 's' keys zoom ('w' = zoom in, 's' = zoom out)
+* 'x' resets to the original orientation
