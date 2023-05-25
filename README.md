@@ -1,10 +1,12 @@
 # Illusion
 Illusion from scaled/rotated/translated dots.
 
-## Running the code
-Option 1: Download and run the EXE (created with PyInstaller, https://pyinstaller.org/en/stable/).
+<img src="Illusion1.png" width="400"> <img src="Illusion3.png" width="400">
 
-Option 2: Running illusion.py with python directly.
+## Running the code
+Option 1: Download and run the **illusion.exe** (created with PyInstaller, https://pyinstaller.org/en/stable/).
+
+Option 2: Running **illusion.py** with python directly.
 1. Have python 3.X installed (https://www.python.org/downloads/)
 2. Have pygame installed (https://www.pygame.org/wiki/GettingStarted)
 There are lots of tutorials for this.
