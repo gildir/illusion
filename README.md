@@ -1,5 +1,5 @@
 # Illusion
-Illusion from scaled/rotated/translated dots.
+Illusion from scaled/rotated/translated dots inspired by video of Tim at Grand Illusions: https://www.youtube.com/watch?v=FmZN1ors__s.
 
 <img src="Illusion1.png" width="400"> <img src="Illusion3.png" width="400">
 
